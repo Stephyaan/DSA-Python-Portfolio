@@ -5,3 +5,7 @@ class Solution:
                ## if (i != j):
                     if (nums[i]+nums[j]==target):
                         return [i,j]
+
+# Time & Space Complexity
+#Time complexity: O(n2)
+#Space complexity: O(1)
