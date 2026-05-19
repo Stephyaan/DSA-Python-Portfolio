@@ -26,15 +26,15 @@ class Solution:
         for r in range(9):
             for c in range(9):
                 if board[r][c]==".":
-                    continue
-                if (board[r][c] in rows[r] or
-                    board[r][c] in cols[c] or 
-                    board[r][c] in squares[(r // 3,c // 3)]):
+                    continue          #move to next loop;dont loop here
+                if (board[r][c] in rows[r] or   #if alrdy in hash set of rows=duplicate in that row
+                    board[r][c] in cols[c] or    #if alrdy in hash set of cols=duplicate in that col
+                    board[r][c] in squares[(r // 3,c // 3)]):     #if alrdy in hash set of squares=duplicate in that square
                     return False
 
-                rows[r].add(board[r][c])
-                cols[c].add(board[r][c])
-                squares[(r//3,c//3)].add(board[r][c])
+                rows[r].add(board[r][c])     #else add to rows hash,to show the no.alrdy in that row
+                cols[c].add(board[r][c])     #add to cols hash, shows alrdy in that col
+                squares[(r//3,c//3)].add(board[r][c])   #add to sq hash, shows no.alrdy in that square
 
         return True
 
