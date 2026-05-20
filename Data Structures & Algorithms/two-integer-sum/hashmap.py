@@ -1,4 +1,4 @@
-##Hash Map : Algorithm
+##Hash Map : Algorithm to find indeces of numbers returning target as sum
 ##Create a hash map to store the value and index of each element in the array.
 ##Iterate through the array using index i and compute the complement of the current element, which is target - nums[i].
 ##Check if the complement exists in the hash map.
