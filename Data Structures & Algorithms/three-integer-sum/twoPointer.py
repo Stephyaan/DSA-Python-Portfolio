@@ -25,10 +25,11 @@ class Solution:
         nums.sort()   #2 pointer only if sorted
 
         for i, a in enumerate(nums):    #a=nums[i]
-            if a > 0:
+            if a > 0:     #positive no. then continue
                 break
 
-            if i > 0 and a == nums[i - 1]:
+            if i > 0 and a == nums[i - 1]: #check duplicate and avoiding it;continue to next(a=nums[i],
+                                             #if a==nums[i-1] in sorted->duplicate)
                 continue
 
             l, r = i + 1, len(nums) - 1
