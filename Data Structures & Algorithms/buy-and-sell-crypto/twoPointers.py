@@ -1,3 +1,14 @@
+#Algorithm
+Set two pointers:
+lBuy = 0 (buy day)
+rSell = 1 (sell day)
+maxP = 0 to track maximum profit
+While rSell is within the array:
+If prices[rSell] > prices[lBuy], compute the profit and update maxProfit.
+Otherwise, move lBuy to rSell (we found a cheaper buy price).
+Move rSell to the next day.
+Return maxProfit at the end.
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         maxProfit=0
@@ -9,3 +20,5 @@ class Solution:
                 lBuy=rSell
             rSell+=1
         return maxProfit
+#time:O(n)
+#space:O(1)
