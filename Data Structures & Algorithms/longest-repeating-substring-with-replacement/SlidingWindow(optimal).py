@@ -21,10 +21,10 @@ class Solution:
             count[s[r]]=1+count.get(s[r],0)  #0 if s[r] not in count{}
             maxf=max(maxf,count[s[r]])
 
-            while ((r-l+1)-maxf) >k:    #valid only if (r-l+1)-maxf <= k
-                count[s[l]]-=1          #invalid
+            while ((r-l+1)-maxf) >k:    #invalid window size, valid only if (r-l+1)-maxf <= k
+                count[s[l]]-=1          
                 l+=1
-            res=max(res,r-l+1)  #valid
+            res=max(res,r-l+1)  #valid window size
         return res
 
 #time:O(n*m)
