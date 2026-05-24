@@ -22,7 +22,7 @@ class Solution:
             maxf=max(maxf,count[s[r]])
 
             while ((r-l+1)-maxf) >k:    #invalid window size, valid only if (r-l+1)-maxf <= k
-                count[s[l]]-=1          
+                count[s[l]]-=1          #invalid;shrinked by moving l pointer and reducing count of s[l]
                 l+=1
             res=max(res,r-l+1)  #valid window size
         return res
