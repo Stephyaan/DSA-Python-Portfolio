@@ -18,7 +18,7 @@ class Solution:
         res=0
         maxf=0
         for r in range(len(s)):
-            count[s[r]]=1+count.get(s[r],0)
+            count[s[r]]=1+count.get(s[r],0)  #0 if s[r] not in count{}
             maxf=max(maxf,count[s[r]])
 
             while ((r-l+1)-maxf) >k:
