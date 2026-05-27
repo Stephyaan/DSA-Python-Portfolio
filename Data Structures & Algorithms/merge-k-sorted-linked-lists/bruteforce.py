@@ -3,11 +3,11 @@ Return the sorted linked list that is the result of merging all of the individua
 ''' Algorithm
 Create an empty list nodes.
 For each linked list:
-Traverse it and append every node's value to nodes.
+       Traverse it and append every node's value to nodes.
 Sort the nodes list.
 Create a new linked list:
-Use a dummy head.
-For each value in the sorted list, create a new node and attach it.
+       Use a dummy head.
+       For each value in the sorted list, create a new node and attach it.
 Return the head of the new merged linked list.
 '''
 sol:
