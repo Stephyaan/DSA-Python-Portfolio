@@ -1,3 +1,16 @@
+'''You are given an array of k linked lists lists, where each list is sorted in ascending order.
+Return the sorted linked list that is the result of merging all of the individual linked lists.'''
+''' Algorithm
+Create an empty list nodes.
+For each linked list:
+Traverse it and append every node's value to nodes.
+Sort the nodes list.
+Create a new linked list:
+Use a dummy head.
+For each value in the sorted list, create a new node and attach it.
+Return the head of the new merged linked list.
+'''
+sol:
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -22,4 +35,5 @@ class Solution:
 
         return result.next  #return each node form result Linked List
 
-
+#time: O(nlogn)
+#space: O(n)
