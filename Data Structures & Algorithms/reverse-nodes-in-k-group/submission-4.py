@@ -34,7 +34,8 @@ class Solution:
         for i in range(0, len(array), k):
             if ((i + k) <= len(array)):
                 array[i:i+k] = array[i:i+k][::-1]
-
+                #return same array with elements in given pos reversed and rest untouched
+                #after each loop take next k, if k ements present, and sort only those k elements
     
         res=ListNode(0)
         curr=res
