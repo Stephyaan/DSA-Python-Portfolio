@@ -1,3 +1,21 @@
+'''Qn: Design a stack class that supports the push, pop, top, and getMin operations.MinStack() initializes the stack object.
+void push(int val) pushes the element val onto the stack.
+void pop() removes the element on the top of the stack.
+int top() gets the top element of the stack.
+int getMin() retrieves the minimum element in the stack.
+Each function should run in O(1) time.
+'''
+'''Algorithm:
+To push a value, append it to the stack.
+To pop, remove the top element of the stack.
+To top, return the last element.
+To getMin:
+Create a temporary list.
+Pop all elements from the stack while tracking the smallest value.
+Push all elements back from the temporary list to restore the stack.
+Return the smallest value found.
+'''
+sol:
 class MinStack:
 
     def __init__(self):
@@ -25,4 +43,6 @@ class MinStack:
             self.stack.append(tmp.pop())  #pop from tmp back to stack;we get in order
 
         return mini #return final mini obtained
-        
+
+#time:O(1) for all;getMin:O(n)
+#space:O(n)
