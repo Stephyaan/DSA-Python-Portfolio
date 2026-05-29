@@ -4,6 +4,7 @@ A car can not pass another car ahead of it. It can only catch up to another car 
 A car fleet is a non-empty set of cars driving at the same position and same speed. A single car is also considered a car fleet.
 If a car catches up to a car fleet the moment the fleet reaches the destination, then the car is considered to be part of the fleet.
 Return the number of different car fleets that will arrive at the destination.'''
+
 '''Algorithm
 Pair each car's position with its speed.
 Sort the cars in descending order of position (closest to target first).
