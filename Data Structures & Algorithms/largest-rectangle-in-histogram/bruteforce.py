@@ -24,5 +24,5 @@ class Solution:
 
         return maxArea
 
-#time:O(n)
-#space:O(n)
+#time:O(n^2)
+#space:O(1)
