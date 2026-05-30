@@ -1,0 +1,21 @@
+'''You are given an m x n 2-D integer array matrix and an integer target.Each row in matrix is sorted in non-decreasing order.
+The first integer of every row is greater than the last integer of the previous row.
+Return true if target exists within matrix or false otherwise.Can you write a solution that runs in O(log(m * n)) time?'''
+'''Algorithm:
+Loop throw each row in matrix
+  go through each element in row by its index
+     compare element at each index with target
+     if found, return true
+ return false  
+'''
+sol:
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        for m in matrix:
+            for n in range(len(m)):
+                if m[n]==target:
+                    return True
+        return False
+
+#time:O(m*n)
+#space:O(1)
