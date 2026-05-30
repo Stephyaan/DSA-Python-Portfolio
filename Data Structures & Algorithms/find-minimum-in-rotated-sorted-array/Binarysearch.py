@@ -15,8 +15,8 @@ class Solution:
         l, r = 0, len(nums) - 1
         while l < r:
             m = l + (r - l) // 2
-            if nums[m] < nums[r]:
-                r = m
+            if nums[m] < nums[r]: #element in mid is lesser, so minimum is btwn nums[l=0] and mid ;
+                r = m             #so move r=mid
             else:
-                l = m + 1
-        return nums[l]
+                l = m + 1        #element at mid is less than r, so move frwd fr min., l moved frwd to m+1
+        return nums[l]          #finally min wld be at l index
