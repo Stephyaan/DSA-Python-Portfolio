@@ -1,3 +1,14 @@
+'''Given a binary search tree (BST) where all node values are unique, and two nodes from the tree p and q, 
+return the lowest common ancestor (LCA) of the two nodes.The lowest common ancestor between two nodes 
+p and q is the lowest node in a tree T such that both p and q as descendants. The ancestor is allowed to be a descendant of itself.'''
+'''Algorithm:
+set curr=root
+while curr not null
+  if p.val and q.val less than the curr.val; move left
+  if p.val and q.val greater than curr.val; move right
+  else then found the node where seperates first;the LCA; return curr
+return null if tree is empty(no return)
+'''
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -20,4 +31,6 @@ class Solution:
             #neednt move,found node where seperates
             else:
                 return curr
-        
+
+#time:O(h) height of tree
+#space:O(n) LCA node space
