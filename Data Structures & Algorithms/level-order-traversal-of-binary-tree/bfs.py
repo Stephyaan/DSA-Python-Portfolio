@@ -1,3 +1,22 @@
+'''Given a binary tree root, return the level order traversal of it as a nested list, 
+where each sublist contains the values of nodes at a particular level in the tree, from left to right.
+Example 1:Input: root = [1,2,3,4,5,6,7] ; Output: [[1],[2,3],[4,5,6,7]]
+Algorithm:
+return empty result list if tree is empty
+create a queue to store elements
+append root to queue initially
+while queue is not empty:
+    qlen is the length of queue which is the no.of nodes in same level
+    initialise empty level list for addiing same level nodes
+    for each element of queue (range qlen):
+       pop from the left most node of queue
+       append this node to level list
+       append the left and right children of the node to queue if exists
+    while level list is not empty append it to the result list
+return the final result list
+'''
+SOL:
+BFS whwn level-order traversal required
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -25,6 +44,6 @@ class Solution:
                 res.append(level)
         return res
 
-
-
+#time:O(n)
+#space:O(n)
         
