@@ -33,11 +33,11 @@ class Solution:
             dfs(node.left) #start with left subtree;smallest nodes
             dfs(node.right) #then start with right subtree;greater nodes
 
-    #time:O(nlogn) sorting-logn and traversing
-    #space:O(n)
-        
         #start traversing from root
         dfs(root)
         arr.sort() #nodes are sorted in array
         return arr[k - 1] #return kth smallest element 
       
+  #time:O(nlogn) sorting-logn and traversing
+    #space:O(n)
+        
