@@ -1,3 +1,19 @@
+'''Algorithm
+Serialize
+Use dfs preorder.
+If node is null → append "N".
+Else append node value.
+Recursively process left child, then right child.
+Join list with commas → return string.
+Deserialize
+Split string into list vals.
+Use an index to process values in order.
+If current value is "N" → return None.
+Otherwise create a node.
+Recursively build left subtree.
+Recursively build right subtree.
+Return the root.
+Serialize and Deserialize Bina'''
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
