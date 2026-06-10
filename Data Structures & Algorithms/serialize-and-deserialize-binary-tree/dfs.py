@@ -1,3 +1,35 @@
+'''Algorithm:
+serialize():
+create an empty string ser to store node values
+define recursive function dfs()
+for each node:
+     if node is null:
+         add "N," to ser
+     else add str(node.value)+',' to string
+     recursively continue for:
+        serialize left subtree
+        serialize right subtree
+call dfs(root) and return final string ser
+
+deserialize():
+split the string data at delimeter ','  to get single nodes values
+initialize index variable i=0
+define recursive function dfs():
+for each char from in string:
+    initialize the index pinter i nonlocally
+    if "N",:
+       increment the index pointer i to move forward
+       return as null node
+   else add the integer node val to tree
+   increment the pointer on string
+   recursively compute:
+       call first dfs() to add nodes left subtree construct left chile
+       then call dfs() to add nodesright subtree
+   return the constructed node
+call dfs() from 0
+return node by dfs this is root
+
+'''
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -41,11 +73,13 @@ class Codec:
             #val not null,add node to tree
             node=TreeNode(int(val[i]))  
             i+=1       #move to next node
-            node.left=dfs()   #recursively do i left subtree
-            node.right=dfs()   #recursively do in right subtree
+            node.left=dfs()   #recursively do in left subtree;preorder so next elemnets after root goes to left subtree
+            node.right=dfs()   #recursively do then in right subtree
             return node   #return the node
         
-        return dfs()    
+        return dfs()   
+#time:O(n)
+#space:O(n)
 
             
 
