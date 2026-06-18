@@ -8,11 +8,11 @@ Use a recursive function dfs(i, cur, total):
 If total == target, add a copy of cur to the result.
 If total > target or i == len(candidates), stop exploring.
 Include the current number:
-Add candidates[i] to cur.
-Recurse with next index i + 1.
-Remove the number (backtrack).
+    Add candidates[i] to cur.
+    Recurse with next index i + 1.
+    Remove the number (backtrack).
 Skip duplicates:
-Advance index i forward while the next number is the same.
+    Advance index i forward while the next number is the same.
 Exclude the current number:
 Call dfs(i + 1, cur, total) after skipping duplicates.
 Return the result list.
