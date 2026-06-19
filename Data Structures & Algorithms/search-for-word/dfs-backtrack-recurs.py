@@ -1,3 +1,20 @@
+'''Given a 2-D grid of characters board and a string word, return true if the word is present in the grid, otherwise return false.
+For the word to be present it must be possible to form it with a path in the board with horizontally or vertically neighboring cells. 
+The same cell may not be used more than once in a word.'''
+'''algorithm:
+initialise ROWS,COLS=len of rows, len of cols
+define recursive function dfs(r,c,i) where i is pos in word we need to match:
+    if i at len(word):
+        found,return True
+    if row,col less than 0 or r,c > ROWS,COLS, or,
+    cur pos in board not char in word, or
+    position alrdy in path:
+        return false
+    add (r,c) to path as alrdy visited
+    recurse to adjacent 4 neighbours
+    unmark (r,c) backtrack
+if any start cell answer is true, return true, else false
+'''
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         #recursive backtracking
@@ -32,5 +49,8 @@ class Solution:
                 if dfs(r, c, 0):
                     return True
         return False
+
+#time:O(n*m*4*n) 4 adjacent pos search required
+#space:O(n) len of word
         
 
