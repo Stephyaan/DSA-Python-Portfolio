@@ -2,7 +2,16 @@
 The solution must not contain duplicate subsets. You may return the solution in any order. Example 1:
 Input: nums = [1,2,1] ; Output: [[],[1],[1,2],[1,1],[1,2,1],[2]]'''
 '''algorithm:
-
+sort the nums
+define recursion backtrack(i,subset):
+    if len(nums)==i:
+        add the copy of subset to result array and return it
+    add each element to subset
+    continue recursion from next position on i+1
+    if cur elemennt and next equals then move pointer frwd;i+1(avoid duplicates)
+    call recursion on next unique index
+start from backtrack(0,[])
+return
 '''
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
