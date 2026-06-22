@@ -13,9 +13,7 @@ define recursive function dfs(i):
         backtracking: remove the last substring
 define function isPallin(s,l,r):
     while l<r, check if s[l:r] pallindrome->return true, else false
-    move left and right pointers
-
-    
+    move left and right pointerss
 '''
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
