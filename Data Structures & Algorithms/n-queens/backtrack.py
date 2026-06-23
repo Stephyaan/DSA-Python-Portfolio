@@ -23,6 +23,7 @@ Remove the queen from the board
 Remove entries from all sets
 Continue until all valid configurations are found.
 '''
+#https://chatgpt.com/s/t_6a3a95b80c588191971bd70b935d671c
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
         #1st try each pos in 1st row
@@ -36,7 +37,7 @@ class Solution:
         board=[['.']*n for i in range(n)] #board col with no Q-> "." , Creates an empty chessboard.
 
         def backtrack(r):
-            if r==n:
+            if r==n:  #if n Q in all rows
                 copy=["".join(row) for row in board]
                 res.append(copy)
                 return
