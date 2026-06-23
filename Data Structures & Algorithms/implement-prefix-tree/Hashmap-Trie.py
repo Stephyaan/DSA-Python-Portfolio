@@ -30,6 +30,8 @@ to find prefix:
         move through next char in childre
     return True
 '''
+#https://chatgpt.com/s/t_6a3aeb1619588191bb0a8f96118c79c2
+#https://chatgpt.com/s/t_6a3aeaf36ac4819191da5384b87ad029
 #Trie->prefix tree
 #prefix tree->prefixes can be searched efficiently
 #StartsWith,search->with starting,
