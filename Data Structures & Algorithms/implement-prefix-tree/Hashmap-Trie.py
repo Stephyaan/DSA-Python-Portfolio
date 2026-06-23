@@ -11,9 +11,9 @@ create function for TrieNode:
 to insert:
     start from root node
     for each char in word:
-        check if char not in children:
+        check if char not in curr node's children:
             then add it to children of cur char in map
-        else, move to next  children of cur char
+        else, move to next children of cur char
         set endOfWord to True
 to search:
     start from root node
