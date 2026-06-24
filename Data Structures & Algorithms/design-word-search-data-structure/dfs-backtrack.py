@@ -1,3 +1,31 @@
+'''Design a data structure that supports adding new words and searching for existing words.Implement the WordDictionary class:
+void addWord(word) Adds word to the data structure.
+bool search(word) Returns true if there is any string in the data structure that matches word or false otherwise. 
+word may contain dots '.' where dots can be matched with any letter. '''
+'''Algorithm: 
+Add Word:
+Start at the root node.
+For each character in the word:
+    If the character is not present in the current node's children, create a new Trie node.
+    Move to the corresponding child node.
+After processing all characters, mark the last node as the end of a word.
+End.
+
+Search Word (Supports . Wildcard): 
+Start searching from the root node and the first character of the word.
+For each character:
+    If the character is a normal letter:
+        If it is not found in the current node's children, return False.
+        Otherwise, move to the corresponding child node.
+    If the character is .:
+        Recursively search every child node for the remaining part of the word.
+        If any recursive search returns True, return True.
+        If none succeed, return False.
+After processing all characters:
+Return True if the current node is marked as the end of a word.
+Otherwise, return False.
+'''
+#https://chatgpt.com/s/t_6a3bd2ce10648191972416c50fc3a807
 class TrieNode:
     def __init__(self):
         self.children={}
